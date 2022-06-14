@@ -1,0 +1,13 @@
+{{>navbar}}
+<div class='container mt-5 text-center'>
+  <form action='/link-chest/eliminar-link/{{links._id}}' method='post'>
+    <div class='mb-3'>
+      <p>Esta seguro que desea eliminar este link</p>
+    </div>
+    <button type='submit' class='btn btn-danger'>Eliminar Link</button>
+    <button class='btn btn-success'><a
+        style=' text-decoration: none ; color: white'
+        href='/link-chest'
+      >Volver</a></button>
+  </form>
+</div>
