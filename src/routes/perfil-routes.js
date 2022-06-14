@@ -3,31 +3,31 @@ import { verifyToken } from '../middleware/verify-token.js';
 import { ControladorDePerfil } from '../controller/perfil-controller';
 import GeneradorDeVista from '../controller/views-controller';
 
-const gdv = new GeneradorDeVista();
-const cdp = new ControladorDePerfil();
+const vista = new GeneradorDeVista();
+const controladorPerfil = new ControladorDePerfil();
 
 const router = Router();
 
-router.get('/link-chest/perfil', verifyToken, gdv.vistaPerfil);
+router.get('/link-chest/perfil', verifyToken, vista.vistaPerfil);
 router.get(
   '/link-chest/perfil/editar-usuario',
   verifyToken,
-  gdv.vistaEditarUsuario
+  vista.vistaEditarUsuario
 );
 router.post(
   '/link-chest/perfil/editar-usuario',
   verifyToken,
-  cdp.editarUsuario
+  controladorPerfil.editarUsuario
 );
 router.get(
   '/link-chest/perfil/eliminar-usuario',
   verifyToken,
-  gdv.vistaEliminarPerfil
+  vista.vistaEliminarPerfil
 );
 router.post(
   '/link-chest/perfil/eliminar-usuario',
   verifyToken,
-  cdp.eliminarCuenta
+  controladorPerfil.eliminarCuenta
 );
 
 export default router;

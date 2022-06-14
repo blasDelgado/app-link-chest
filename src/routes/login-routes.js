@@ -1,16 +1,16 @@
 import { Router } from 'express';
 import { haveToken } from '../middleware/have-token.js';
-import LoginController from '../controller/login-controller.js';
-import GeneradorDeVista from '../controller/views-controller';
+import ControladorLogin from '../controller/login-controller.js';
+import ControladorDeVista from '../controller/views-controller';
 
 const router = Router();
-const gdv = new GeneradorDeVista();
-const controller = new LoginController();
+const vista = new ControladorDeVista();
+const controladorLogin = new ControladorLogin();
 
-router.get('/login', haveToken, gdv.vistaLogin);
-router.post('/login', haveToken, controller.login);
-router.get('/signup', haveToken, gdv.vistaSignup);
-router.post('/signup', haveToken, controller.signup);
-router.get('/logout', controller.logout);
+router.get('/login', haveToken, vista.vistaLogin);
+router.post('/login', haveToken, controladorLogin.login);
+router.get('/signup', haveToken, vista.vistaSignup);
+router.post('/signup', haveToken, controladorLogin.signup);
+router.get('/logout', controladorLogin.logout);
 
 export default router;

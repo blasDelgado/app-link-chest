@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { token_crypt } from '../config.js';
 import User from '../model/user-model.js';
 
-export default class GeneradorDeVista {
+export default class ControladorDeVista {
   //Links Vista
   async mainVista(req, res) {
     try {

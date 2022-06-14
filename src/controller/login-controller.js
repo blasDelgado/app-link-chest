@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { clearCookie } from 'express/lib/response.js';
 import { token_crypt } from '../config.js';
 
-export default class LoginController {
+export default class ControladorLogin {
   async login(req, res) {
     const { username, password } = req.body;
     let passwordV;
