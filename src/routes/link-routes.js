@@ -20,26 +20,26 @@ router.post(
 );
 //Editar link
 router.get('/link-chest/editar-link/:id', verifyToken, vista.editarVista);
-router.post(
+router.put(
   '/link-chest/editar-link/:id',
   verifyToken,
   controladorLink.editarLink
 );
 //Eliminar link
 router.get('/link-chest/eliminar-link/:id', verifyToken, vista.eliminarVista);
-router.post(
+router.delete(
   '/link-chest/eliminar-link/:id',
   verifyToken,
   controladorLink.eliminarLink
 );
 //Links compartidos
 //Compartir link
-router.get(
+router.patch(
   '/link-chest/compartir-link/:id',
   verifyToken,
   controladorLink.compartirLink
 );
-router.get(
+router.patch(
   '/link-chest/no-compartir-link/:id',
   verifyToken,
   controladorLink.noCompartirLink
@@ -49,7 +49,7 @@ router.get(
   verifyToken,
   vista.linkCompartidosVista
 );
-router.get(
+router.post(
   '/link-chest/guardar-link-compartido/:id',
   verifyToken,
   controladorLink.guardarLinkCompartido

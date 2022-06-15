@@ -14,7 +14,7 @@ router.get(
   verifyToken,
   vista.vistaEditarUsuario
 );
-router.post(
+router.patch(
   '/link-chest/perfil/editar-usuario',
   verifyToken,
   controladorPerfil.editarUsuario
@@ -24,7 +24,7 @@ router.get(
   verifyToken,
   vista.vistaEliminarPerfil
 );
-router.post(
+router.delete(
   '/link-chest/perfil/eliminar-usuario',
   verifyToken,
   controladorPerfil.eliminarCuenta

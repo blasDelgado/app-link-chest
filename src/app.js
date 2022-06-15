@@ -5,6 +5,7 @@ import { engine } from 'express-handlebars';
 import session from 'express-session';
 import flash from 'connect-flash';
 import cookieParser from 'cookie-parser';
+import mth from 'method-override';
 //Rutas
 import signroutes from './routes/login-routes.js';
 import mainroutes from './routes/link-routes.js';
@@ -14,6 +15,7 @@ const app = express();
 
 //Middleware
 app.use(morgan('dev'));
+app.use(mth('_method'));
 
 //Configuraciones
 app.use(express.json());
