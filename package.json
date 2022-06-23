@@ -4,9 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx babel src --out-dir lib",
-    "dev": "nodemon src/index.js --exec babel-node",
     "start": "NODE_ENV=production node lib/index.js "
   },
   "author": "blasDelgado",
@@ -21,6 +18,7 @@
     "nodemon": "2.0.16"
   },
   "dependencies": {
+    "@babel/runtime": "^7.18.3",
     "bcryptjs": "2.4.3",
     "connect-flash": "0.1.1",
     "cookie-parser": "1.4.6",
