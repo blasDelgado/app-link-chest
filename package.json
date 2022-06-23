@@ -5,20 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src --out-dir lib",
     "dev": "nodemon src/index.js --exec babel-node",
-    "start": "NODE_ENV=production babel-node src/index.js "
+    "start": "NODE_ENV=production node lib/index.js "
   },
   "author": "blasDelgado",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "7.17.10",
+    "@babel/core": "7.17.10",
+    "@babel/node": "7.17.10",
+    "@babel/plugin-transform-runtime": "^7.18.5",
+    "@babel/preset-env": "7.17.10",
     "morgan": "1.10.0",
     "nodemon": "2.0.16"
   },
   "dependencies": {
-    "@babel/cli": "7.17.10",
-    "@babel/core": "7.17.10",
-    "@babel/node": "7.17.10",
-    "@babel/preset-env": "7.17.10",
     "bcryptjs": "2.4.3",
     "connect-flash": "0.1.1",
     "cookie-parser": "1.4.6",

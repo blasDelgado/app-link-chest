@@ -1,0 +1,57 @@
+{{>navbar}}
+<section class='vh-100' style='background-color: #2b5f93;'>
+  <div class='container py-5 h-100'>
+    <div class='row d-flex justify-content-center align-items-center h-100'>
+      <div class='col-12 col-md-8 col-lg-6 col-xl-5'>
+        <div class='card shadow-2-strong' style='border-radius: 1rem;'>
+          <form action='/link-chest/perfil/editar-usuario?_method=PATCH' method='post'>
+            <div class='card-body p-5 text-center'>
+
+              <h3 class='mb-5'>Complete con los datos que desea actualizar</h3>
+
+              <div class='form-outline mb-4'>
+                <label class='form-label' for='typePasswordX-2'>Reingrese su
+                  password</label>
+                <input
+                  type='password'
+                  id='typePasswordX-2'
+                  class='form-control form-control-lg'
+                  name='password'
+                  required
+                />
+
+              </div>
+
+              <div class='form-outline mb-4'>
+                <label class='form-label' for='typePasswordX-2'>Nuevo Password</label>
+                <input
+                  type='nuevoPassword'
+                  id='typePasswordX-2'
+                  class='form-control form-control-lg'
+                  name='nuevoPassword'
+                  required
+                />
+
+              </div>
+
+              <div class='card-body p-5 text-center'>
+
+                <button
+                  class='btn btn-danger btn-lg btn-block'
+                  type='submit'
+                >Actualizar Datos</button>
+
+              </div>
+
+            </div>
+          </form>
+          {{#if mensaje}}<div id='estado' class='p-5 text-center'>
+              <div
+                class='alert alert-danger'
+                role='alert'
+              >{{mensaje}}</div></div>{{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
