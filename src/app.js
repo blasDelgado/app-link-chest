@@ -1,4 +1,4 @@
-/* import express from 'express';
+import express from 'express';
 import morgan from 'morgan';
 import path from 'path';
 import { engine } from 'express-handlebars';
@@ -9,7 +9,7 @@ import mth from 'method-override';
 //Rutas
 import signroutes from './routes/login-routes.js';
 import mainroutes from './routes/link-routes.js';
-import perfilroutes from './routes/perfil-routes'; */
+import perfilroutes from './routes/perfil-routes';
 
 const app = express();
 
