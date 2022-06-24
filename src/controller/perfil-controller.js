@@ -35,7 +35,7 @@ export class ControladorDePerfil {
     const userId = jwt.verify(req.cookies.token, token_crypt).id;
     try {
       await User.findByIdAndDelete({ _id: userId });
-      await link.find({ user: userId }).deleteMany();
+      await link.find({ user_id: userId }).deleteMany();
       res.clearCookie('token');
       res.redirect('/login');
     } catch (e) {
